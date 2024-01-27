@@ -1,0 +1,126 @@
+
+Pranay@PranayTanajiGhatkar MINGW64 /
+$ mkdir  DevOps
+mkdir: cannot create directory ‘DevOps’: Permission denied
+
+Pranay@PranayTanajiGhatkar MINGW64 /
+$ cd
+
+Pranay@PranayTanajiGhatkar MINGW64 ~ (master)
+$ mkdir  DevOps
+
+Pranay@PranayTanajiGhatkar MINGW64 ~ (master)
+$ cd DevOps
+
+Pranay@PranayTanajiGhatkar MINGW64 ~/DevOps (master)
+$ mkdir  GitDemo
+
+Pranay@PranayTanajiGhatkar MINGW64 ~/DevOps (master)
+$ cd  GitDemo
+
+Pranay@PranayTanajiGhatkar MINGW64 ~/DevOps/GitDemo (master)
+$ git clone https://github.com/PranayGhatkar/GitDemo.git
+Cloning into 'GitDemo'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+Pranay@PranayTanajiGhatkar MINGW64 ~/DevOps/GitDemo (master)
+$ ls
+GitDemo/
+
+Pranay@PranayTanajiGhatkar MINGW64 ~/DevOps/GitDemo (master)
+$ cd gitrepo1
+bash: cd: gitrepo1: No such file or directory
+
+Pranay@PranayTanajiGhatkar MINGW64 ~/DevOps/GitDemo (master)
+$ cd GitDemo
+
+Pranay@PranayTanajiGhatkar MINGW64 ~/DevOps/GitDemo/GitDemo (main)
+$ echo "Hello DemoFile" >> file
+
+Pranay@PranayTanajiGhatkar MINGW64 ~/DevOps/GitDemo/GitDemo (main)
+$ ls -la
+total 6
+drwxr-xr-x 1 Pranay 197609  0 Jan 27 21:41 ./
+drwxr-xr-x 1 Pranay 197609  0 Jan 27 21:37 ../
+drwxr-xr-x 1 Pranay 197609  0 Jan 27 21:37 .git/
+-rw-r--r-- 1 Pranay 197609 36 Jan 27 21:37 README.md
+-rw-r--r-- 1 Pranay 197609 15 Jan 27 21:41 file
+
+Pranay@PranayTanajiGhatkar MINGW64 ~/DevOps/GitDemo/GitDemo (main)
+$ git add file
+warning: in the working copy of 'file', LF will be replaced by CRLF the next time Git touches it
+
+Pranay@PranayTanajiGhatkar MINGW64 ~/DevOps/GitDemo/GitDemo (main)
+$ git commit -m "DemoFile Created on 27th Jan 2024"
+[main c52c0c9] DemoFile Created on 27th Jan 2024
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file
+
+Pranay@PranayTanajiGhatkar MINGW64 ~/DevOps/GitDemo/GitDemo (main)
+$ git push
+To https://github.com/PranayGhatkar/GitDemo.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/PranayGhatkar/GitDemo.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Pranay@PranayTanajiGhatkar MINGW64 ~/DevOps/GitDemo/GitDemo (main)
+$ git push
+To https://github.com/PranayGhatkar/GitDemo.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/PranayGhatkar/GitDemo.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Pranay@PranayTanajiGhatkar MINGW64 ~/DevOps/GitDemo/GitDemo (main)
+$ git pull
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 7.55 KiB | 309.00 KiB/s, done.
+From https://github.com/PranayGhatkar/GitDemo
+   648ec67..62977c7  main       -> origin/main
+Merge made by the 'ort' strategy.
+ LICENSE | 339 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 339 insertions(+)
+ create mode 100644 LICENSE
+
+Pranay@PranayTanajiGhatkar MINGW64 ~/DevOps/GitDemo/GitDemo (main)
+$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 660 bytes | 330.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/PranayGhatkar/GitDemo.git
+   62977c7..3a28697  main -> main
+
+Pranay@PranayTanajiGhatkar MINGW64 ~/DevOps/GitDemo/GitDemo (main)
+$ cd ..
+
+Pranay@PranayTanajiGhatkar MINGW64 ~/DevOps/GitDemo (master)
+$ ls
+GitDemo/
+
+Pranay@PranayTanajiGhatkar MINGW64 ~/DevOps/GitDemo (master)
+$ git init GitDemoRepo2
+Initialized empty Git repository in C:/Users/prana/DevOps/GitDemo/GitDemoRepo2/.git/
+
+Pranay@PranayTanajiGhatkar MINGW64 ~/DevOps/GitDemo (master)
+$ ls
+GitDemo/  GitDemoRepo2/
+
+Pranay@PranayTanajiGhatkar MINGW64 ~/DevOps/GitDemo (master)
+$ cd GitDemoRepo2
+
